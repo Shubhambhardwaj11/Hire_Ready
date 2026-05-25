@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | HireReady</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">HireReady</div>
+        <div class="nav-links">
+            <button class="btn-logout" onclick="logout()">Logout</button>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <div class="dashboard-header">
+            <h2>Welcome back, <span id="welcome-name">there</span>! 👋</h2>
+            <p>Ready to practice today?</p>
+        </div>
+
+        <div class="dashboard-roles">
+            <h3>Start New Interview</h3>
+            <p class="section-sub">Pick a role to begin</p>
+            <div class="role-cards-grid">
+                <div class="role-card" onclick="startInterview('Frontend')">
+                    <span>💻</span>
+                    <p>Frontend Developer</p>
+                </div>
+                <div class="role-card" onclick="startInterview('Backend')">
+                    <span>⚙️</span>
+                    <p>Backend Developer</p>
+                </div>
+                <div class="role-card" onclick="startInterview('Full Stack')">
+                    <span>🔥</span>
+                    <p>Full Stack Developer</p>
+                </div>
+                <div class="role-card" onclick="startInterview('DSA')">
+                    <span>🧠</span>
+                    <p>DSA / Problem Solving</p>
+                </div>
+                <div class="role-card" onclick="startInterview('DevOps')">
+                    <span>🚀</span>
+                    <p>DevOps</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="history-section">
+            <h3>Past Sessions</h3>
+            <div id="sessions-list">
+                <p class="no-sessions">No sessions yet. Start your first interview!</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
