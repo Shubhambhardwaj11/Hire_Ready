@@ -15,7 +15,7 @@ let sessionId = null
 
 // Load questions when page opens
 async function loadQuestions() {
-    const response = await fetch('http://localhost:5000/api/interview/start', {
+    const response = await fetch('https://hire-ready-i2ot.onrender.com/api/interview/start', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -77,7 +77,7 @@ async function submitInterview() {
     document.getElementById('loading-screen').style.display = 'block'
     document.getElementById('loading-screen').innerHTML = '🤖 Evaluating your answers...'
 
-    const response = await fetch('http://localhost:5000/api/interview/submit', {
+    const response = await fetch('https://hire-ready-i2ot.onrender.com/api/interview/submit', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
